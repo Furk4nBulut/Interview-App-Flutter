@@ -16,10 +16,10 @@ class BaseView<T extends Store> extends StatefulWidget {
       : super(key: key);
 
   @override
-  _baseViewState createState() => _baseViewState();
+  _BaseViewState createState() => _BaseViewState();
 }
 
-class _baseViewState extends State<BaseView> {
+class _BaseViewState extends State<BaseView> {
   @override
   void initState() {
     super.initState();

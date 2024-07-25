@@ -4,22 +4,26 @@ import 'package:interview_app/core/provider/provider_list.dart';
 import 'package:interview_app/view/authenticate/splash/splash_view.dart';
 import 'package:interview_app/view/authenticate/splash/splash_view_model.dart';
 import 'package:provider/provider.dart';
-import 'package:interview_app/view/authenticate/welcome/welcome_view.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:interview_app/core/localization/localization_manager.dart';
-
 import 'core/provider/theme_notifier.dart';
 import 'core/routing/navigation_route.dart';
 import 'core/service/NavigationService.dart';
 
-void main() {
-  runApp(EasyLocalization(
-    child: MyApp(),
-    supportedLocales: LanguageManager.instance.supportedLocales,
-    path: ApplicationConstants.LANGUAGE_ASSETS_PATH,
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
 
-  ));
+  runApp(
+    EasyLocalization(
+      supportedLocales: LanguageManager.instance.supportedLocales,
+      path: ApplicationConstants.LANGUAGE_ASSETS_PATH,
+      fallbackLocale: Locale('en'), // Provide a fallback locale
+      child: MyApp(),
+    ),
+  );
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => SplashViewModel()),
       ],
       child: MaterialApp(
-        theme: Provider.of<ThemeNotifier>(context,listen: false).currentTheme,
+       //theme: Provider.of<ThemeNotifier>(context,listen: false).currentTheme,
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
         navigatorKey: NavigationService.instance.navigatorKey,
