@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_app/core/cache/locale_manager.dart';
 import 'package:interview_app/core/constants/app/app_constants.dart';
 import 'package:interview_app/core/provider/provider_list.dart';
 import 'package:interview_app/view/authenticate/splash/splash_view.dart';
@@ -14,12 +15,16 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
+  LocaleManager.prefrencesInit();
   runApp(
-    EasyLocalization(
+    MultiProvider(providers:
+    [ ...ApplicationProvider.instance.dependItems],
+    child: EasyLocalization(
       supportedLocales: LanguageManager.instance.supportedLocales,
       path: ApplicationConstants.LANGUAGE_ASSETS_PATH,
       fallbackLocale: Locale('en'), // Provide a fallback locale
       child: MyApp(),
+    ),
     ),
   );
 }
