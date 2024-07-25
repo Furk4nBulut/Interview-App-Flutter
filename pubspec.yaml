@@ -39,6 +39,12 @@ dependencies:
   flutter_mobx:
   easy_localization:
 
+  dio:
+  json_serializable:
+  json_annotation:
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
