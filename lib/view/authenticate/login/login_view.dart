@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:interview_app/core/constants/color.dart';
+import 'package:interview_app/core/constants/navigation_constants.dart';
 import 'package:interview_app/view/authenticate/login/login_view_model.dart';
 import 'package:interview_app/view/authenticate/register/register_view.dart';
 import 'package:interview_app/view/authenticate/widget/custom_scaffold.dart';
-
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:interview_app/core/constants/color.dart';
-import 'package:interview_app/view/authenticate/login/login_view_model.dart';
-import 'package:interview_app/view/authenticate/register/register_view.dart';
 
 class LoginView extends StatelessWidget {
   @override

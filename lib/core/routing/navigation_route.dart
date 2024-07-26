@@ -6,6 +6,11 @@ import '../../view/authenticate/register/register_view.dart';
 import '../../view/authenticate/splash/splash_view.dart';
 import '../../view/authenticate/welcome/welcome_view.dart';
 import '../components/card/not_found_navigation_widget.dart';
+import '../../view/quiz/home/home_view.dart';
+import '../../view/quiz/job/job_detail_view.dart';
+import '../../view/quiz/quiz/quiz_view.dart';
+import '../../view/quiz/result/result_view.dart';
+
 
 class NavigationRoute {
   NavigationRoute._init();
@@ -14,9 +19,6 @@ class NavigationRoute {
 
   Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-
-
-
       case NavigationConstants.SPLASH:
         return normalNavigate(SplashScreen());
 
@@ -26,10 +28,26 @@ class NavigationRoute {
       case NavigationConstants.LOGIN:
         return normalNavigate(LoginView());
 
-       case NavigationConstants.REGISTER:
+      case NavigationConstants.REGISTER:
         return normalNavigate(RegisterView());
 
-
+      case NavigationConstants.HOME: // Add this case
+        return normalNavigate(HomeView());
+      case NavigationConstants.JOB_DETAIL: // Add this case
+        final departmentName = settings.arguments as String?;
+        return MaterialPageRoute(
+          builder: (context) => JobDetailsView(departmentName: departmentName ?? ''),
+        );
+        case NavigationConstants.QUIZ: // Add this case
+        final jobTitle = settings.arguments as String?;
+        return MaterialPageRoute(
+          builder: (context) => QuizView(jobTitle: jobTitle ?? ''),
+        );
+        
+        case NavigationConstants.RESULT: // Add this case
+        return MaterialPageRoute(
+          builder: (context) => ResultView(isSuccess: false,),
+        );
 
 
       default:
