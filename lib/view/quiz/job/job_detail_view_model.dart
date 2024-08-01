@@ -18,6 +18,9 @@ class JobDetailsViewModel extends ChangeNotifier {
     // Implement search functionality here if needed
   }
 
+  onLogoutPressed() {
+    // Implement logout functionality here
+  }
 
 
   void navigateToQuiz(BuildContext context, String jobTitle) {

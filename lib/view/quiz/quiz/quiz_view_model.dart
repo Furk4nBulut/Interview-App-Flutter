@@ -1,6 +1,9 @@
 // lib/view/quiz/quiz/quiz_view_model.dart
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:interview_app/view/quiz/job/job_detail_view.dart';
 
 class QuizViewModel extends ChangeNotifier {
   final String jobTitle;
@@ -51,6 +54,10 @@ class QuizViewModel extends ChangeNotifier {
   void _navigateToResultScreen() {
     // Navigate to result screen
     // Here you could also calculate scores and pass them to the result screen
+  }
+
+  void onLogoutPressed() {
+    // Implement logout functionality
   }
 
   // Example method to handle an option selection

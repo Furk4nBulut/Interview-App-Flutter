@@ -8,6 +8,7 @@ import 'package:interview_app/core/components/card/question_card_widget.dart'; /
 import 'package:interview_app/core/constants/color.dart'; // Ensure correct import path
 import 'package:interview_app/view/quiz/result/result_view.dart'; // Ensure correct import path
 
+
 class QuizView extends StatelessWidget {
   final String jobTitle;
 
@@ -28,6 +29,7 @@ class QuizView extends StatelessWidget {
               title: viewModel.appBarTitle,
               onBackPressed: () => viewModel.onBackPressed(context),
               onSearchPressed: viewModel.onSearchPressed,
+              onLogoutPressed: () => viewModel.onLogoutPressed(),
             ),
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,

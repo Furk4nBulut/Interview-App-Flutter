@@ -35,6 +35,7 @@ class JobDetailsView extends StatelessWidget {
               title: viewModel.appBarTitle,
               onBackPressed: () => viewModel.onBackPressed(context),
               onSearchPressed: viewModel.onSearchPressed,
+              onLogoutPressed: viewModel.onLogoutPressed,
             ),
             body: Padding(
               padding: const EdgeInsets.all(16.0),
