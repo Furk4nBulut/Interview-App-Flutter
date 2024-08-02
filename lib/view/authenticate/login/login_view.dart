@@ -55,13 +55,13 @@ class LoginView extends StatelessWidget {
                               controller: viewModel.emailController,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return LocaleKeys.login_view_please_enter_email;
+                                  return LocaleKeys.login_view_please_enter_email.locale;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: LocaleKeys.login_view_email,
-                                hintText: LocaleKeys.login_view_email,
+                                labelText: LocaleKeys.login_view_email.locale,
+                                hintText: LocaleKeys.login_view_email.locale,
                                 hintStyle: const TextStyle(color: Colors.black),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),
@@ -80,13 +80,13 @@ class LoginView extends StatelessWidget {
                               obscuringCharacter: '*',
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return LocaleKeys.login_view_please_enter_password;
+                                  return LocaleKeys.login_view_please_enter_password.locale;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: LocaleKeys.login_view_password,
-                                hintText: LocaleKeys.login_view_password,
+                                labelText: LocaleKeys.login_view_password.locale,
+                                hintText: LocaleKeys.login_view_password.locale,
                                 hintStyle: const TextStyle(color: Colors.black),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),

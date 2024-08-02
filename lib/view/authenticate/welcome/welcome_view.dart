@@ -48,7 +48,7 @@ class WelcomeView extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: LocaleKeys.welcome_view_welcome_title.tr(),
+                                  text: LocaleKeys.welcome_view_welcome_title.locale,
                                   style: TextStyle(
                                     fontSize: 50.0,
                                     fontWeight: FontWeight.w900,
@@ -63,7 +63,7 @@ class WelcomeView extends StatelessWidget {
                                   ),
                                 ),
                                 TextSpan(
-                                  text: '\n${LocaleKeys.welcome_view_welcome_subtitle.tr()}',
+                                  text: '\n${LocaleKeys.welcome_view_welcome_subtitle.locale}',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
@@ -93,7 +93,7 @@ class WelcomeView extends StatelessWidget {
                       children: [
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: LocaleKeys.login_view_login.tr(),
+                            buttonText: LocaleKeys.login_view_login.locale,
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -108,7 +108,7 @@ class WelcomeView extends StatelessWidget {
                         ),
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: LocaleKeys.welcome_view_register.tr(),
+                            buttonText: LocaleKeys.welcome_view_register.locale,
                             onTap: () {
                               Navigator.push(
                                 context,
