@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//flutter pub run easy_localization:generate -o lib/core/localization -f keys -o locale_keys.g.dart -S assets/localization -O lib/core/localization/
 class LanguageManager {
 
   LanguageManager._init();

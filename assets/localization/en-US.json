@@ -1,30 +1,39 @@
 {
-  "welcome_title": "Interview Application",
-  "welcome_subtitle": "Online interview application",
-  "login": "Login",
-  "register": "Register",
+  "welcome_view": {
+    "welcome_title": "Interview Application",
+    "welcome_subtitle": "Online Interview Application",
+    "login": "Log In",
+    "register": "Sign Up"
+  },
 
-  "login_title": "Login",
-  "is_account": "Don't have an account yet?",
-  "email": "Email",
-  "password": "Password",
-  "please_enter_email": "Please enter an email address",
-  "please_enter_password": "Please enter a password",
-  "another_sign_in_method": "Other Sign-in Methods",
-  "login_button": "Login",
+  "login_view": {
+    "login": "Log In",
+    "login_title": "Login Form",
+    "is_account": "Don't have an account yet?",
+    "email": "Email",
+    "password": "Password",
+    "another_sign_in_method": "Other Login Methods",
+    "register": "Sign Up",
+    "login_button": "Sign In",
+  "please_enter_email": "Please enter your email address",
+    "please_enter_password": "Please enter your password"
+  },
 
-  "register_title": "Registration Form",
-  "name": "Name",
-  "name_hint": "Enter your name",
-  "surname": "Surname",
-  "surname_hint": "Enter your surname",
-  "email_hint": "Enter your email address",
-  "password_hint": "Enter your password",
-  "register_button": "Register",
-  "user_agreement": "I accept the",
-  "user_agreement_accept": "processing of my information.",
-  "another_register_method": "Other Registration Methods",
-  "already_have_account": "Already have an account?"
+  "register_view": {
+    "register_title": "Registiration Form",
+    "name": "First Name",
+    "name_hint": "Enter your first name",
+    "surname": "Last Name",
+    "surname_hint": "Enter your last name",
+    "email_hint": "Enter your email address",
+    "password_hint": "Enter your password",
+    "register_button": "Sign Up",
+    "user_agreement": "Processing of my information ",
+    "user_agreement_accept": "I agree.",
+    "another_register_method": "Other Registration Methods",
+    "already_have_account": "Already have an account? ",
+    "password": "Password",
+    "email": "Email",
+    "login": "Sign In"
+  }
 }
-
-

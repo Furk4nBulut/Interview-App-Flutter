@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_app/core/constants/image_path_constants.dart';
+import 'package:interview_app/core/extension/string_extension.dart';
 import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 import 'package:interview_app/core/constants/color.dart';
@@ -9,6 +10,7 @@ import 'package:interview_app/view/authenticate/widget/custom_scaffold.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class LoginView extends StatelessWidget {
+  EasyLocalization? easyLocalization;
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -41,7 +43,7 @@ class LoginView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              LocaleKeys.login_title,
+                              LocaleKeys.login_view_login_title.locale,
                               style: TextStyle(
                                 fontSize: 30.0,
                                 fontWeight: FontWeight.w900,
@@ -53,13 +55,13 @@ class LoginView extends StatelessWidget {
                               controller: viewModel.emailController,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return LocaleKeys.please_enter_email;
+                                  return LocaleKeys.login_view_please_enter_email;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: LocaleKeys.email,
-                                hintText: LocaleKeys.email,
+                                labelText: LocaleKeys.login_view_email,
+                                hintText: LocaleKeys.login_view_email,
                                 hintStyle: const TextStyle(color: Colors.black),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),
@@ -78,13 +80,13 @@ class LoginView extends StatelessWidget {
                               obscuringCharacter: '*',
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return LocaleKeys.please_enter_password;
+                                  return LocaleKeys.login_view_please_enter_password;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: LocaleKeys.password,
-                                hintText: LocaleKeys.password,
+                                labelText: LocaleKeys.login_view_password,
+                                hintText: LocaleKeys.login_view_password,
                                 hintStyle: const TextStyle(color: Colors.black),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),
@@ -110,8 +112,8 @@ class LoginView extends StatelessWidget {
                                     ? const CircularProgressIndicator(
                                   color: Colors.white,
                                 )
-                                    : const Text(
-                                  LocaleKeys.login_button,
+                                    :  Text(
+                                  LocaleKeys.login_view_login_button.locale,
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.bold,
@@ -130,13 +132,13 @@ class LoginView extends StatelessWidget {
                                     color: Colors.grey.withOpacity(0.5),
                                   ),
                                 ),
-                                const Padding(
+                                 Padding(
                                   padding: EdgeInsets.symmetric(
                                     vertical: 0,
                                     horizontal: 10,
                                   ),
                                   child: Text(
-                                    LocaleKeys.another_sign_in_method,
+                                    LocaleKeys.login_view_another_sign_in_method.locale,
                                     style: TextStyle(
                                       color: Colors.black45,
                                     ),
@@ -166,7 +168,7 @@ class LoginView extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                 Text(LocaleKeys.is_account.tr()),
+                                 Text(LocaleKeys.login_view_is_account.locale),
                                 GestureDetector(
                                   onTap: () {
                                     Navigator.push(
@@ -177,7 +179,7 @@ class LoginView extends StatelessWidget {
                                     );
                                   },
                                   child: Text(
-                                   LocaleKeys.register.tr(),
+                                   LocaleKeys.login_view_register.locale,
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: basarsoft_color,

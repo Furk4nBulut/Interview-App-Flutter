@@ -14,7 +14,6 @@ import 'core/service/NavigationService.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-
   LocaleManager.prefrencesInit();
   runApp(
     MultiProvider(providers:
@@ -22,7 +21,8 @@ void main() async {
     child: EasyLocalization(
       supportedLocales: LanguageManager.instance.supportedLocales,
       path: ApplicationConstants.LANGUAGE_ASSETS_PATH,
-      fallbackLocale: LanguageManager.instance.trLocale, // Provide a fallback locale
+      startLocale: LanguageManager.instance.trLocale,
+      fallbackLocale: LanguageManager.instance.trLocale,
       child: MyApp(),
     ),
     ),
@@ -41,6 +41,9 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
        //theme: Provider.of<ThemeNotifier>(context,listen: false).currentTheme,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
         navigatorKey: NavigationService.instance.navigatorKey,

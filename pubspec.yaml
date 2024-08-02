@@ -38,10 +38,12 @@ dependencies:
   provider:
   flutter_mobx:
   easy_localization:
+  auto_size_text:
 
   dio:
   json_serializable:
   json_annotation:
+
 
 
 

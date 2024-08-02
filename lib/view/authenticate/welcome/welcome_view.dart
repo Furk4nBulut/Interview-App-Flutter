@@ -2,10 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:interview_app/core/constants/color.dart';
 import 'package:interview_app/core/constants/image_path_constants.dart';
+import 'package:interview_app/core/extension/string_extension.dart';
 import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:interview_app/view/authenticate/login/login_view.dart';
 import 'package:interview_app/view/authenticate/register/register_view.dart';
 import 'package:interview_app/core/components/button/welcome_button.dart';
+import 'package:interview_app/core/constants/color.dart';
 
 class WelcomeView extends StatelessWidget {
   @override
@@ -21,7 +23,7 @@ class WelcomeView extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-          ImagePathConstants.welcomeImage,
+            ImagePathConstants.welcomeImage,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -46,7 +48,7 @@ class WelcomeView extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: LocaleKeys.welcome_subtitle,
+                                  text: LocaleKeys.welcome_view_welcome_title.tr(),
                                   style: TextStyle(
                                     fontSize: 50.0,
                                     fontWeight: FontWeight.w900,
@@ -61,7 +63,7 @@ class WelcomeView extends StatelessWidget {
                                   ),
                                 ),
                                 TextSpan(
-                                  text: '\n${LocaleKeys.welcome_subtitle}',
+                                  text: '\n${LocaleKeys.welcome_view_welcome_subtitle.tr()}',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
@@ -91,7 +93,7 @@ class WelcomeView extends StatelessWidget {
                       children: [
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: LocaleKeys.login,
+                            buttonText: LocaleKeys.login_view_login.tr(),
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -106,7 +108,7 @@ class WelcomeView extends StatelessWidget {
                         ),
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: LocaleKeys.register,
+                            buttonText: LocaleKeys.welcome_view_register.tr(),
                             onTap: () {
                               Navigator.push(
                                 context,

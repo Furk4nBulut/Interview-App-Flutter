@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:interview_app/core/extension/string_extension.dart';
 
 class LocaleText extends StatelessWidget {
-  final String value;
+  final String text;
 
-  const LocaleText({required Key key, required this.value}) : super(key: key);
+  const LocaleText({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      value.locale,
+      text.locale,
     );
   }
 }
