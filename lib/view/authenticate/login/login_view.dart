@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_app/core/constants/image_path_constants.dart';
 import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 import 'package:interview_app/core/constants/color.dart';
@@ -40,7 +41,7 @@ class LoginView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              LocaleKeys.login_title.tr(),
+                              LocaleKeys.login_title,
                               style: TextStyle(
                                 fontSize: 30.0,
                                 fontWeight: FontWeight.w900,
@@ -157,7 +158,7 @@ class LoginView extends StatelessWidget {
                                   onTap: () async {
                                     // Google sign-in logic
                                   },
-                                  child: Image.asset('assets/images/google.png'),
+                                  child: Image.asset(ImagePathConstants.googleLogo),
                                 ),
                               ],
                             ),

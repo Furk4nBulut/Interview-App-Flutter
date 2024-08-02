@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_app/core/constants/image_path_constants.dart';
 import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 import 'package:interview_app/core/constants/color.dart';
@@ -226,7 +227,7 @@ class RegisterView extends StatelessWidget {
                                   onTap: () async {
                                     // Implement Google sign-in logic here
                                   },
-                                  child: Image.asset('assets/images/google.png'),
+                                  child: Image.asset(ImagePathConstants.googleLogo),
                                 ),
                               ],
                             ),

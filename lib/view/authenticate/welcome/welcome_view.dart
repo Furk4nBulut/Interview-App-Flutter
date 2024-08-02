@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:interview_app/core/constants/color.dart';
+import 'package:interview_app/core/constants/image_path_constants.dart';
 import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:interview_app/view/authenticate/login/login_view.dart';
 import 'package:interview_app/view/authenticate/register/register_view.dart';
@@ -20,7 +21,7 @@ class WelcomeView extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assets/welcome/welcome.png',
+          ImagePathConstants.welcomeImage,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -45,7 +46,7 @@ class WelcomeView extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: LocaleKeys.welcome_title,
+                                  text: LocaleKeys.welcome_subtitle,
                                   style: TextStyle(
                                     fontSize: 50.0,
                                     fontWeight: FontWeight.w900,

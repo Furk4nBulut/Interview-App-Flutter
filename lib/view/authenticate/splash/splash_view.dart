@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:interview_app/core/constants/image_path_constants.dart';
 import 'package:provider/provider.dart';
 import 'splash_view_model.dart';
 
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/splash/splashscreen.png"),
+            image: AssetImage(ImagePathConstants.splashImage),
             fit: BoxFit.cover,
           ),
         ),

@@ -22,7 +22,7 @@ void main() async {
     child: EasyLocalization(
       supportedLocales: LanguageManager.instance.supportedLocales,
       path: ApplicationConstants.LANGUAGE_ASSETS_PATH,
-      fallbackLocale: Locale('en'), // Provide a fallback locale
+      fallbackLocale: LanguageManager.instance.trLocale, // Provide a fallback locale
       child: MyApp(),
     ),
     ),

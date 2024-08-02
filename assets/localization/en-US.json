@@ -1,4 +1,30 @@
 {
-  "welcome": "Welcome to App"
+  "welcome_title": "Interview Application",
+  "welcome_subtitle": "Online interview application",
+  "login": "Login",
+  "register": "Register",
 
+  "login_title": "Login",
+  "is_account": "Don't have an account yet?",
+  "email": "Email",
+  "password": "Password",
+  "please_enter_email": "Please enter an email address",
+  "please_enter_password": "Please enter a password",
+  "another_sign_in_method": "Other Sign-in Methods",
+  "login_button": "Login",
+
+  "register_title": "Registration Form",
+  "name": "Name",
+  "name_hint": "Enter your name",
+  "surname": "Surname",
+  "surname_hint": "Enter your surname",
+  "email_hint": "Enter your email address",
+  "password_hint": "Enter your password",
+  "register_button": "Register",
+  "user_agreement": "I accept the",
+  "user_agreement_accept": "processing of my information.",
+  "another_register_method": "Other Registration Methods",
+  "already_have_account": "Already have an account?"
 }
+
+

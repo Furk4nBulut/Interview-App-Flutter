@@ -1,0 +1,28 @@
+{
+  "welcome_title": "Mülakat Uygulaması",
+  "welcome_subtitle": "Online mülakat uygulaması",
+  "login": "Giriş Yap",
+  "register": "Kayıt Ol",
+
+  "login_title": "Giriş Yap",
+  "is_account": "Henüz Bir Hesabınız yok mu?",
+  "email": "Email",
+  "password": "Şifre",
+  "please_enter_email": "Lütfen bir e-posta adresi girin",
+  "please_enter_password": "Lütfen bir şifre girin",
+  "another_sign_in_method": "Diğer Giriş Yöntemleri",
+  "login_button": "Giriş Yap",
+
+  "register_title": "Kayıt Formu",
+  "name": "Ad",
+  "name_hint": "Adınızı Giriniz",
+  "surname": "Soyad",
+  "surname_hint": "Soyadınızı Giriniz",
+  "email_hint": "E-posta Adresinizi Giriniz",
+  "password_hint": "Şifrenizi Giriniz",
+  "register_button": "Kayıt Ol",
+  "user_agreement": "Bilgilerimin işlenmesini",
+  "user_agreement_accept": "kabul ediyorum.",
+  "another_register_method": "Diğer Kayıt Yöntemleri",
+  "already_have_account": "Zaten bir hesabınız var mı?"
+}
