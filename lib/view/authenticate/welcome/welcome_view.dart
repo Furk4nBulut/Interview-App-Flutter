@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:interview_app/core/constants/color.dart';
+import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:interview_app/view/authenticate/login/login_view.dart';
 import 'package:interview_app/view/authenticate/register/register_view.dart';
 import 'package:interview_app/core/components/button/welcome_button.dart';
@@ -43,7 +45,7 @@ class WelcomeView extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: 'Mülakat Uygulaması\n',
+                                  text: LocaleKeys.welcome_title,
                                   style: TextStyle(
                                     fontSize: 50.0,
                                     fontWeight: FontWeight.w900,
@@ -58,7 +60,7 @@ class WelcomeView extends StatelessWidget {
                                   ),
                                 ),
                                 TextSpan(
-                                  text: '\nOnline mülakat uygulaması',
+                                  text: '\n${LocaleKeys.welcome_subtitle}',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
@@ -88,7 +90,7 @@ class WelcomeView extends StatelessWidget {
                       children: [
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: 'Giriş Yap',
+                            buttonText: LocaleKeys.login,
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -103,7 +105,7 @@ class WelcomeView extends StatelessWidget {
                         ),
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: 'Kayıt Ol',
+                            buttonText: LocaleKeys.register,
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -128,6 +130,3 @@ class WelcomeView extends StatelessWidget {
     );
   }
 }
-
-const basarsoft_color = Color(0xFF02205C);
-const basarsoft_color_light = Color(0xFF00A5FF);

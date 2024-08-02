@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 import 'package:interview_app/core/constants/color.dart';
-import 'package:interview_app/core/constants/navigation_constants.dart';
 import 'package:interview_app/view/authenticate/login/login_view_model.dart';
 import 'package:interview_app/view/authenticate/register/register_view.dart';
 import 'package:interview_app/view/authenticate/widget/custom_scaffold.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class LoginView extends StatelessWidget {
   @override
@@ -39,7 +40,7 @@ class LoginView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              'Giriş Yap',
+                              LocaleKeys.login_title.tr(),
                               style: TextStyle(
                                 fontSize: 30.0,
                                 fontWeight: FontWeight.w900,
@@ -51,13 +52,13 @@ class LoginView extends StatelessWidget {
                               controller: viewModel.emailController,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Lütfen bir e-posta adresi girin';
+                                  return LocaleKeys.please_enter_email;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: 'Email',
-                                hintText: 'Email',
+                                labelText: LocaleKeys.email,
+                                hintText: LocaleKeys.email,
                                 hintStyle: const TextStyle(color: Colors.black),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),
@@ -76,13 +77,13 @@ class LoginView extends StatelessWidget {
                               obscuringCharacter: '*',
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Lütfen bir şifre girin';
+                                  return LocaleKeys.please_enter_password;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: 'Şifre',
-                                hintText: 'Şifre',
+                                labelText: LocaleKeys.password,
+                                hintText: LocaleKeys.password,
                                 hintStyle: const TextStyle(color: Colors.black),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),
@@ -109,7 +110,7 @@ class LoginView extends StatelessWidget {
                                   color: Colors.white,
                                 )
                                     : const Text(
-                                  'Giriş Yap',
+                                  LocaleKeys.login_button,
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.bold,
@@ -134,7 +135,7 @@ class LoginView extends StatelessWidget {
                                     horizontal: 10,
                                   ),
                                   child: Text(
-                                    'Diğer Giriş Yöntemleri',
+                                    LocaleKeys.another_sign_in_method,
                                     style: TextStyle(
                                       color: Colors.black45,
                                     ),
@@ -164,7 +165,7 @@ class LoginView extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Text('Henüz Bir Hesabın Yok Mu? '),
+                                 Text(LocaleKeys.is_account.tr()),
                                 GestureDetector(
                                   onTap: () {
                                     Navigator.push(
@@ -175,7 +176,7 @@ class LoginView extends StatelessWidget {
                                     );
                                   },
                                   child: Text(
-                                    'Kayıt Ol!',
+                                   LocaleKeys.register.tr(),
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: basarsoft_color,

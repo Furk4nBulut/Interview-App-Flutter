@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_app/core/localization/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 import 'package:interview_app/core/constants/color.dart';
 import 'package:interview_app/view/authenticate/register/register_view_model.dart';
@@ -38,7 +39,7 @@ class RegisterView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              'Kayıt Formu',
+                              LocaleKeys.register_title,
                               style: TextStyle(
                                 fontSize: 30.0,
                                 fontWeight: FontWeight.w900,
@@ -53,13 +54,13 @@ class RegisterView extends StatelessWidget {
                                     controller: viewModel.firstNameController,
                                     validator: (value) {
                                       if (value == null || value.isEmpty) {
-                                        return 'Ad Giriniz';
+                                        return LocaleKeys.name_hint;
                                       }
                                       return null;
                                     },
                                     decoration: InputDecoration(
-                                      labelText: 'Ad',
-                                      hintText: 'Adınızı Giriniz',
+                                      labelText: LocaleKeys.name,
+                                      hintText: LocaleKeys.name_hint,
                                       hintStyle: const TextStyle(color: Colors.black26),
                                       border: OutlineInputBorder(
                                         borderSide: const BorderSide(color: basarsoft_color),
@@ -78,13 +79,13 @@ class RegisterView extends StatelessWidget {
                                     controller: viewModel.lastNameController,
                                     validator: (value) {
                                       if (value == null || value.isEmpty) {
-                                        return 'Soyad Giriniz';
+                                        return LocaleKeys.surname_hint;
                                       }
                                       return null;
                                     },
                                     decoration: InputDecoration(
-                                      labelText: 'Soyad',
-                                      hintText: 'Soyadınızı Giriniz',
+                                      labelText: LocaleKeys.surname,
+                                      hintText: LocaleKeys.surname_hint,
                                       hintStyle: const TextStyle(color: Colors.black26),
                                       border: OutlineInputBorder(
                                         borderSide: const BorderSide(color: basarsoft_color),
@@ -104,13 +105,13 @@ class RegisterView extends StatelessWidget {
                               controller: viewModel.emailController,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Email Adresi Giriniz';
+                                  return LocaleKeys.email_hint;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: 'Email',
-                                hintText: 'Email Adresi Giriniz',
+                                labelText: LocaleKeys.email,
+                                hintText: LocaleKeys.email_hint,
                                 hintStyle: const TextStyle(color: Colors.black26),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),
@@ -129,13 +130,13 @@ class RegisterView extends StatelessWidget {
                               obscuringCharacter: '*',
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Şifre Giriniz';
+                                  return LocaleKeys.password_hint;
                                 }
                                 return null;
                               },
                               decoration: InputDecoration(
-                                labelText: 'Şifre',
-                                hintText: 'Şifre Giriniz',
+                                labelText: LocaleKeys.password,
+                                hintText: LocaleKeys.password_hint,
                                 hintStyle: const TextStyle(color: Colors.black26),
                                 border: OutlineInputBorder(
                                   borderSide: const BorderSide(color: basarsoft_color),
@@ -158,11 +159,11 @@ class RegisterView extends StatelessWidget {
                                   activeColor: basarsoft_color,
                                 ),
                                 const Text(
-                                  'Bilgilerimin işlenmesini  ',
+                                  LocaleKeys.user_agreement,
                                   style: TextStyle(color: Colors.black45),
                                 ),
                                 Text(
-                                  'Kabul Ediyorum.',
+                                  LocaleKeys.user_agreement_accept,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: basarsoft_color,
@@ -183,7 +184,7 @@ class RegisterView extends StatelessWidget {
                                   ),
                                 ),
                                 child: const Text(
-                                  'Kayıt Ol',
+                                  LocaleKeys.register_button,
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.bold,
@@ -205,7 +206,7 @@ class RegisterView extends StatelessWidget {
                                 const Padding(
                                   padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
                                   child: Text(
-                                    'Diğer Kayıt Yöntemleri',
+                                    LocaleKeys.another_register_method,
                                     style: TextStyle(color: Colors.black45),
                                   ),
                                 ),
@@ -234,7 +235,7 @@ class RegisterView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 const Text(
-                                  'Zaten Bir Hesabın Var Mı? ',
+                                  LocaleKeys.already_have_account,
                                   style: TextStyle(color: Colors.black45),
                                 ),
                                 GestureDetector(
@@ -247,7 +248,7 @@ class RegisterView extends StatelessWidget {
                                     );
                                   },
                                   child: Text(
-                                    'Giriş Yap',
+                                    LocaleKeys.login,
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: basarsoft_color,
