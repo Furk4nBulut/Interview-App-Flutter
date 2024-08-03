@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:interview_app/core/constants/navigation_constants.dart';
-
 import '../../view/authenticate/login/login_view.dart';
 import '../../view/authenticate/register/register_view.dart';
 import '../../view/authenticate/splash/splash_view.dart';

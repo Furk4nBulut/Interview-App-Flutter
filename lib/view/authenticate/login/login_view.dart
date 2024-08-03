@@ -9,8 +9,17 @@ import 'package:interview_app/view/authenticate/register/register_view.dart';
 import 'package:interview_app/view/authenticate/widget/custom_scaffold.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
+
+  LoginView({super.key});
+
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
   EasyLocalization? easyLocalization;
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

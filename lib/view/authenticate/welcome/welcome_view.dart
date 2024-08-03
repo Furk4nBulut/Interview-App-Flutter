@@ -9,6 +9,7 @@ import 'package:interview_app/view/authenticate/login/login_view.dart';
 import 'package:interview_app/view/authenticate/register/register_view.dart';
 import 'package:interview_app/core/components/button/welcome_button.dart';
 import 'package:interview_app/core/constants/color.dart';
+import 'package:interview_app/view/authenticate/welcome/welcome_view_model.dart';
 
 class WelcomeView extends StatelessWidget {
   @override
@@ -108,14 +109,9 @@ class WelcomeView extends StatelessWidget {
                       children: [
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: LocaleKeys.login_view_login.locale,
+                            buttonText: 'Giriş Yap',
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => LoginView(),
-                                ),
-                              );
+                             WelcomeViewModel().navigateToLogin(context);
                             },
                             color: Colors.transparent,
                             textColor: Colors.white,
@@ -123,14 +119,9 @@ class WelcomeView extends StatelessWidget {
                         ),
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: LocaleKeys.welcome_view_register.locale,
+                            buttonText: 'Kayıt Ol',
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => RegisterView(),
-                                ),
-                              );
+                              WelcomeViewModel().navigateToRegister(context);
                             },
                             color: Colors.white,
                             textColor: basarsoft_color,

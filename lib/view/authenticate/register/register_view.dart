@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:interview_app/core/constants/image_path_constants.dart';
 import 'package:interview_app/core/extension/string_extension.dart';
@@ -8,7 +9,17 @@ import 'package:interview_app/view/authenticate/register/register_view_model.dar
 import 'package:interview_app/view/authenticate/login/login_view.dart';
 import 'package:interview_app/view/authenticate/widget/custom_scaffold.dart';
 
-class RegisterView extends StatelessWidget {
+class RegisterView extends StatefulWidget {
+
+  RegisterView({super.key});
+
+  @override
+  State<RegisterView> createState() => _RegisterViewState();
+}
+
+class _RegisterViewState extends State<RegisterView> {
+  EasyLocalization? easyLocalization;
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
