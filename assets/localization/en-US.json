@@ -3,7 +3,9 @@
     "welcome_title": "Interview Application",
     "welcome_subtitle": "Online Interview Application",
     "login": "Log In",
-    "register": "Sign Up"
+    "register": "Sign Up",
+    "language": "English",
+    "app_language": "English"
   },
 
   "login_view": {

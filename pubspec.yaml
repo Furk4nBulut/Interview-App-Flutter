@@ -39,6 +39,7 @@ dependencies:
   flutter_mobx:
   easy_localization:
   auto_size_text:
+  country_flags:
 
   dio:
   json_serializable:

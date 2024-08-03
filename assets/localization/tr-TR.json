@@ -3,7 +3,9 @@
     "welcome_title": "Mülakat Uygulaması",
     "welcome_subtitle": "Online Mülakat Uygulaması",
     "login": "Giriş Yap",
-    "register": "Kayıt Ol"
+    "register": "Kayıt Ol",
+    "language": "Türkçe",
+    "app_language": "Türkçe"
   },
   "login_view": {
     "login": "Giriş Yap",
