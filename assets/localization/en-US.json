@@ -5,7 +5,8 @@
     "login": "Log In",
     "register": "Sign Up",
     "language": "English",
-    "app_language": "English"
+    "app_language": "English",
+    "change_language": "Change Language"
   },
 
   "login_view": {

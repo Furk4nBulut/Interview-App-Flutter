@@ -5,7 +5,8 @@
     "login": "Giriş Yap",
     "register": "Kayıt Ol",
     "language": "Türkçe",
-    "app_language": "Türkçe"
+    "app_language": "Türkçe",
+    "change_language": "Dil Değiştir"
   },
   "login_view": {
     "login": "Giriş Yap",

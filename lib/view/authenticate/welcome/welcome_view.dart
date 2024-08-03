@@ -1,6 +1,7 @@
 import 'package:country_flags/country_flags.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:interview_app/core/components/button/change_language_button.dart';
 import 'package:interview_app/core/constants/color.dart';
 import 'package:interview_app/core/constants/image_path_constants.dart';
 import 'package:interview_app/core/extension/string_extension.dart';
@@ -21,16 +22,10 @@ class WelcomeView extends StatelessWidget {
         elevation: 0,
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(
-            icon: CountryFlag.fromLanguageCode(
-              Localizations.localeOf(context).languageCode,
-            ),
+          ChangeLanguageButton(
+            languageCode: Localizations.localeOf(context).languageCode,
             onPressed: () {
-              context.setLocale(
-                Localizations.localeOf(context).languageCode == 'en'
-                    ? const Locale('tr', 'TR')
-                    : const Locale('en', 'US'),
-              );
+              WelcomeViewModel().toggleLanguage(context);
             },
           ),
         ],

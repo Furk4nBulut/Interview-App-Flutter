@@ -7,6 +7,7 @@ abstract class  LocaleKeys {
   static const welcome_view_register = 'welcome_view.register';
   static const welcome_view_language = 'welcome_view.language';
   static const welcome_view_app_language = 'welcome_view.app_language';
+  static const welcome_view_change_language = 'welcome_view.change_language';
   static const welcome_view = 'welcome_view';
   static const login_view_login = 'login_view.login';
   static const login_view_login_title = 'login_view.login_title';
