@@ -9,141 +9,142 @@ import 'package:interview_app/view/authenticate/login/login_view.dart';
 import 'package:interview_app/view/authenticate/register/register_view.dart';
 import 'package:interview_app/core/components/button/welcome_button.dart';
 import 'package:interview_app/core/constants/color.dart';
-import 'package:provider/provider.dart';
-
-import 'welcome_view_model.dart';
 
 class WelcomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => WelcomeViewModel(),
-      child: Scaffold(
-        appBar: AppBar(
-          iconTheme: const IconThemeData(color: Colors.white),
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          automaticallyImplyLeading: false,
-          actions: [
-            IconButton(
-              icon: CountryFlag.fromLanguageCode(
-                Localizations.localeOf(context).languageCode,
-              ),
-              onPressed: () {
-                context.setLocale(
-                  Localizations.localeOf(context).languageCode == 'en'
-                      ? const Locale('tr', 'TR')
-                      : const Locale('en', 'US'),
-                );
-              },
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            icon: CountryFlag.fromLanguageCode(
+              Localizations.localeOf(context).languageCode,
             ),
-          ],
-        ),
-        extendBodyBehindAppBar: true,
-        body: Stack(
-          children: [
-            Image.asset(
-              ImagePathConstants.welcomeImage,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
-            ),
-            SafeArea(
-              child: Column(
-                children: [
-                  Flexible(
-                    flex: 8,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 0,
-                        horizontal: 40.0,
-                      ),
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const SizedBox(height: 485.0),
-                            RichText(
-                              textAlign: TextAlign.center,
-                              text: TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: LocaleKeys.welcome_view_welcome_title.locale,
-                                    style: TextStyle(
-                                      fontSize: 50.0,
-                                      fontWeight: FontWeight.w900,
-                                      color: basarsoft_color,
-                                      shadows: [
-                                        Shadow(
-                                          color: Colors.white.withOpacity(0.3),
-                                          offset: Offset(2, 2),
-                                          blurRadius: 3,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: '\n${LocaleKeys.welcome_view_welcome_subtitle.locale}',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.white,
-                                      shadows: [
-                                        Shadow(
-                                          color: basarsoft_color.withOpacity(0.3),
-                                          offset: Offset(2, 2),
-                                          blurRadius: 3,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+            onPressed: () {
+              context.setLocale(
+                Localizations.localeOf(context).languageCode == 'en'
+                    ? const Locale('tr', 'TR')
+                    : const Locale('en', 'US'),
+              );
+            },
+          ),
+        ],
+      ),
+      extendBodyBehindAppBar: true,
+      body: Stack(
+        children: [
+          Image.asset(
+            ImagePathConstants.welcomeImage,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          SafeArea(
+            child: Column(
+              children: [
+                Flexible(
+                  flex: 8,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 0,
+                      horizontal: 40.0,
                     ),
-                  ),
-                  Flexible(
-                    flex: 1,
-                    child: Align(
-                      alignment: Alignment.bottomRight,
-                      child: Row(
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Expanded(
-                            child: WelcomeButton(
-                              buttonText: LocaleKeys.login_view_login.locale,
-                              onTap: () {
-                                Provider.of<WelcomeViewModel>(context, listen: false)
-                                    .navigateToLogin(context);
-                              },
-                              color: Colors.transparent,
-                              textColor: Colors.white,
-                            ),
-                          ),
-                          Expanded(
-                            child: WelcomeButton(
-                              buttonText: LocaleKeys.welcome_view_register.locale,
-                              onTap: () {
-                                Provider.of<WelcomeViewModel>(context, listen: false)
-                                    .navigateToRegister(context);
-                              },
-                              color: Colors.white,
-                              textColor: basarsoft_color,
+                          const SizedBox(height: 485.0),
+                          RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: LocaleKeys.welcome_view_welcome_title.locale,
+                                  style: TextStyle(
+                                    fontSize: 50.0,
+                                    fontWeight: FontWeight.w900,
+                                    color: basarsoft_color,
+                                    shadows: [
+                                      Shadow(
+                                        color: Colors.white.withOpacity(0.3),
+                                        offset: Offset(2, 2),
+                                        blurRadius: 3,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: '\n${LocaleKeys.welcome_view_welcome_subtitle.locale}',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white,
+                                    shadows: [
+                                      Shadow(
+                                        color: basarsoft_color.withOpacity(0.3),
+                                        offset: Offset(2, 2),
+                                        blurRadius: 3,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: WelcomeButton(
+                            buttonText: LocaleKeys.login_view_login.locale,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LoginView(),
+                                ),
+                              );
+                            },
+                            color: Colors.transparent,
+                            textColor: Colors.white,
+                          ),
+                        ),
+                        Expanded(
+                          child: WelcomeButton(
+                            buttonText: LocaleKeys.welcome_view_register.locale,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RegisterView(),
+                                ),
+                              );
+                            },
+                            color: Colors.white,
+                            textColor: basarsoft_color,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
-  }
-
+}
