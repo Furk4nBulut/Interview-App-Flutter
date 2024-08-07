@@ -104,7 +104,7 @@ class WelcomeView extends StatelessWidget {
                       children: [
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: 'Giriş Yap',
+                            buttonText: LocaleKeys.welcome_view_login.locale,
                             onTap: () {
                              WelcomeViewModel().navigateToLogin(context);
                             },
@@ -114,7 +114,7 @@ class WelcomeView extends StatelessWidget {
                         ),
                         Expanded(
                           child: WelcomeButton(
-                            buttonText: 'Kayıt Ol',
+                            buttonText: LocaleKeys.welcome_view_register.locale,
                             onTap: () {
                               WelcomeViewModel().navigateToRegister(context);
                             },
