@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
         home: SplashScreen(),
         navigatorKey: NavigationService.instance.navigatorKey,
         onGenerateRoute: NavigationRoute.instance.generateRoute,
+        theme: Provider.of<ThemeNotifier>(context,listen: false).currentTheme
       ),
     );
   }

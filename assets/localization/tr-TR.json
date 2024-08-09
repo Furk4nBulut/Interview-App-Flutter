@@ -20,6 +20,10 @@
     "please_enter_email": "Lütfen e-posta adresinizi giriniz",
     "please_enter_password": "Lütfen şifrenizi giriniz"
   },
+  "login_view_model": {
+    "login_process": "Giriş yapılıyor..."
+  },
+
   "register_view": {
     "register_title": "Kayıt Formu",
     "name": "Ad",

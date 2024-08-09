@@ -21,6 +21,9 @@
   "please_enter_email": "Please enter your email address",
     "please_enter_password": "Please enter your password"
   },
+  "login_view_model": {
+    "login_process": "Log in..."
+  },
 
   "register_view": {
     "register_title": "Registiration Form",

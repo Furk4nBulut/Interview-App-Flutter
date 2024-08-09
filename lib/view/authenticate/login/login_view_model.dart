@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interview_app/core/constants/navigation_constants.dart';
+import 'package:interview_app/core/extension/string_extension.dart';
+import 'package:interview_app/core/localization/locale_keys.g.dart';
 
 class LoginViewModel extends ChangeNotifier {
   final TextEditingController emailController = TextEditingController();
@@ -14,7 +16,7 @@ class LoginViewModel extends ChangeNotifier {
     notifyListeners();
 
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Giriş Yapılıyor...')),
+       SnackBar(content: Text(LocaleKeys.login_view_model_login_process.locale)),
     );
 
     // Simulate login logic

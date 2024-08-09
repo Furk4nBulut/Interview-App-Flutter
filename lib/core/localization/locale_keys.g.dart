@@ -20,6 +20,8 @@ abstract class  LocaleKeys {
   static const login_view_please_enter_email = 'login_view.please_enter_email';
   static const login_view_please_enter_password = 'login_view.please_enter_password';
   static const login_view = 'login_view';
+  static const login_view_model_login_process = 'login_view_model.login_process';
+  static const login_view_model = 'login_view_model';
   static const register_view_register_title = 'register_view.register_title';
   static const register_view_name = 'register_view.name';
   static const register_view_name_hint = 'register_view.name_hint';
