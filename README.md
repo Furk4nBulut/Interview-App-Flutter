@@ -1,16 +1,11 @@
-# interview_app
+# Interview App
 
-An interview application for  Başarsoft Bilgi Teknolojileri A.Ş.
+An interview application for Başarsoft Bilgi Teknolojileri A.Ş.
+
+![App Preview](https://github.com/Furk4nBulut/Interview-App-Flutter/blob/master/app_preview.png)
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project was initiated during my internship at Başarsoft but was later discontinued.
